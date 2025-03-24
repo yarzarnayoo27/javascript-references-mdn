@@ -1,7 +1,5 @@
 const image = document.querySelector("img");
 
-image.addEventListener("click", () => swapImage());
-
 const swapImage = () => {
   let src = image.getAttribute("src");
   if (src === "assets/black-bitcoin.png") {
@@ -10,3 +8,5 @@ const swapImage = () => {
     image.setAttribute("src", "assets/black-bitcoin.png");
   }
 };
+
+image.addEventListener("click", swapImage);
